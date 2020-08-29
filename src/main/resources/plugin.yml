@@ -1,0 +1,13 @@
+name: Cloudgui
+version: ${project.version}
+main: de.snapecraft.cloudgui.Cloudgui
+
+depend: [CloudNetAPI]
+authors: [Tallerik]
+description: Configure CloudNet Features ingame
+website: tallerik.de / snapecraft.net
+
+commands:
+  cloudgui:
+    aliases:
+      - cgui
