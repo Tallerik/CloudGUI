@@ -21,5 +21,4 @@ jobs:
     - name: Create Artifact
       uses: actions/upload-artifact@v2.1.4
       with:
-        name: CloudGUI.jar
-        path: target/cloudgui-*
+        path: target/cloudgui.jar
