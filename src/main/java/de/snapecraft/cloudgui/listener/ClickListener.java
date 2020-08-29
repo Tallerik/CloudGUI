@@ -82,7 +82,7 @@ public class ClickListener implements Listener {
         }
         // Server Sub GUI
         if(event.getView().getTitle().contains("Server")) {
-            event.getWhoClicked().sendMessage("CLICK");
+            
             event.setCancelled(true);
             if(event.getCurrentItem() == null) return;
             if(Perms.hasPerm((Player) event.getWhoClicked(), Permission.MANAGESERVER)) {
