@@ -39,7 +39,7 @@ public class ClickListener implements Listener {
 
     @EventHandler
     public void onInvClick(InventoryClickEvent event) {
-        if (event.isLeftClick() && event.getView().getTitle().equals("Cloud")) {
+        if (event.getView().getTitle().equals("Cloud")) {
             if(event.getCurrentItem() == null) return;
             event.setCancelled(true);
             if (event.getCurrentItem().getItemMeta().getDisplayName().equals("Wartungsmodus An")) {
@@ -81,7 +81,8 @@ public class ClickListener implements Listener {
 
         }
         // Server Sub GUI
-        if(event.isLeftClick() && event.getView().getTitle().startsWith("§6Server§7: §a")) {
+        if(event.getView().getTitle().contains("Server")) {
+            event.getWhoClicked().sendMessage("CLICK");
             event.setCancelled(true);
             if(event.getCurrentItem() == null) return;
             if(Perms.hasPerm((Player) event.getWhoClicked(), Permission.MANAGESERVER)) {

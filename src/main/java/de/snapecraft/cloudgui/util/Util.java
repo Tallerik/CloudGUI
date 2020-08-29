@@ -75,11 +75,11 @@ public class Util {
         }
         ItemStack servercover = changeItemMeta(new ItemStack(Material.GLASS_PANE, 1, (short) 3), "§4Laufende Server");
 
-        for (int i = 18; i < 27; i++) {
+        for (int i = 9; i < 18; i++) {
             inv.setItem(i, servercover);
         }
         if(Perms.hasPerm(p, Permission.SHOWSERVERS)) {
-            int i = 27;
+            int i = 18;
             for(ServerInfo server : CloudAPI.getInstance().getServers()) {
                 String add;
                 String add2;
@@ -105,8 +105,8 @@ public class Util {
                 i++;
             }
         }
-        if(Perms.hasPerm(p, Permission.SHOWPROXYS)) {
-            int i = 36;
+        if(Perms.hasPerm(p, Permission.SHOWPROXIES)) {
+            int i = 27;
             for(ProxyInfo server : CloudAPI.getInstance().getProxys()) {
                 String add;
                 if(server.isOnline()) {
